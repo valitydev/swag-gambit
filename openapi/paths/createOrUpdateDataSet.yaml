@@ -1,0 +1,56 @@
+post:
+  summary: Сохранение нового набора данных
+  operationId: createDataSet
+  tags:
+    - dataSets
+
+  requestBody:
+    content:
+      multipart/form-data:
+        schema:
+          type: object
+          properties:
+            dataSetName:
+              type: string
+            file:
+              type: string
+              format: binary
+
+  responses:
+    '201':
+      description: Created new data set
+    '401':
+      description: Unauthorized
+    '403':
+      description: Forbidden
+    '404':
+      description: Not Found
+
+put:
+  summary: Добавление данных в существующий набор
+  operationId: updateDataSet
+  tags:
+    - dataSets
+
+  requestBody:
+    content:
+      multipart/form-data:
+        schema:
+          type: object
+          properties:
+            dataSetName:
+              type: string
+            file:
+              type: string
+              format: binary
+
+  responses:
+    '201':
+      description: Updated data set
+    '401':
+      description: Unauthorized
+    '403':
+      description: Forbidden
+    '404':
+      description: Not Found
+

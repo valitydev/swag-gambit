@@ -1,0 +1,28 @@
+openapi: 3.0.3
+info:
+  version: 1.0.0
+  title: Vality Gambit API
+  description:
+    $ref: './docs/api.md'
+  termsOfService: http://vality.dev/
+  contact:
+    name: Vality support team
+    email: support@vality.dev
+    url: 'https://developer.vality.com'
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+  - url: 'https://gambit:8080/gambit/v1'
+paths:
+  /dataSets:
+    $ref: ./paths/createOrUpdateDataSet.yaml
+security:
+  - bearer: []
+tags:
+  - name: dataSets
+    x-displayName: Data Sets
+components:
+  securitySchemes:
+    bearer:
+      $ref: './components/security-schemes/Bearer.yaml'
