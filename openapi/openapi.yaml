@@ -15,7 +15,7 @@ info:
 servers:
   - url: 'https://gambit:8080/gambit/v1'
 paths:
-  /dataSets:
+  /data-sets:
     $ref: ./paths/createOrUpdateDataSet.yaml
 security:
   - bearer: []

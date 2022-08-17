@@ -19,12 +19,14 @@ post:
   responses:
     '201':
       description: Created new data set
+    '400':
+      $ref: '../components/responses/BadRequest.yaml'
     '401':
-      description: Unauthorized
+      $ref: '../components/responses/Unauthenticated.yaml'
     '403':
-      description: Forbidden
+      $ref: '../components/responses/AccessForbidden.yaml'
     '404':
-      description: Not Found
+      $ref: '../components/responses/NotFound.yaml'
 
 put:
   summary: Добавление данных в существующий набор
@@ -47,9 +49,11 @@ put:
   responses:
     '201':
       description: Updated data set
+    '400':
+      $ref: '../components/responses/BadRequest.yaml'
     '401':
-      description: Unauthorized
+      $ref: '../components/responses/Unauthenticated.yaml'
     '403':
-      description: Forbidden
+      $ref: '../components/responses/AccessForbidden.yaml'
     '404':
-      description: Not Found
+      $ref: '../components/responses/NotFound.yaml'
