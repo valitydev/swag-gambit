@@ -11,8 +11,10 @@ post:
           type: object
           properties:
             dataSetName:
+              description: unique name of data set
               type: string
             file:
+              description: csv file with header
               type: string
               format: binary
 
@@ -41,8 +43,10 @@ put:
           type: object
           properties:
             dataSetName:
+              description: name of already existing data set
               type: string
             file:
+              description: csv file with header
               type: string
               format: binary
 
