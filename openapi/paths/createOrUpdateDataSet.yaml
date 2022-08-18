@@ -1,0 +1,63 @@
+post:
+  summary: Сохранение нового набора данных
+  operationId: createDataSet
+  tags:
+    - dataSets
+
+  requestBody:
+    content:
+      multipart/form-data:
+        schema:
+          type: object
+          properties:
+            dataSetName:
+              description: unique name of data set
+              type: string
+            file:
+              description: csv file with header
+              type: string
+              format: binary
+
+  responses:
+    '201':
+      description: Created new data set
+    '400':
+      $ref: '../components/responses/BadRequest.yaml'
+    '401':
+      $ref: '../components/responses/Unauthenticated.yaml'
+    '403':
+      $ref: '../components/responses/AccessForbidden.yaml'
+    '404':
+      $ref: '../components/responses/NotFound.yaml'
+
+put:
+  summary: Добавление данных в существующий набор
+  operationId: updateDataSet
+  tags:
+    - dataSets
+
+  requestBody:
+    content:
+      multipart/form-data:
+        schema:
+          type: object
+          properties:
+            dataSetName:
+              description: name of already existing data set
+              type: string
+            file:
+              description: csv file with header
+              type: string
+              format: binary
+
+  responses:
+    '201':
+      description: Updated data set
+    '400':
+      $ref: '../components/responses/BadRequest.yaml'
+    '401':
+      $ref: '../components/responses/Unauthenticated.yaml'
+    '403':
+      $ref: '../components/responses/AccessForbidden.yaml'
+    '404':
+      $ref: '../components/responses/NotFound.yaml'
