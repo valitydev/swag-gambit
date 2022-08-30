@@ -51,7 +51,7 @@ put:
               format: binary
 
   responses:
-    '201':
+    '200':
       description: Updated data set
     '400':
       $ref: '../components/responses/BadRequest.yaml'
