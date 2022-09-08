@@ -9,10 +9,14 @@ post:
       multipart/form-data:
         schema:
           type: object
+          required:
+            - dataSetName
+            - file
           properties:
             dataSetName:
               description: unique name of data set
               type: string
+              minLength: 1
             file:
               description: csv file with header
               type: string
@@ -41,10 +45,14 @@ put:
       multipart/form-data:
         schema:
           type: object
+          required:
+            - dataSetName
+            - file
           properties:
             dataSetName:
               description: name of already existing data set
               type: string
+              minLength: 1
             file:
               description: csv file with header
               type: string
