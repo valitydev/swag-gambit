@@ -16,6 +16,7 @@ post:
             dataSetName:
               description: unique name of data set
               type: string
+              minLength: 1
             file:
               description: csv file with header
               type: string
@@ -51,6 +52,7 @@ put:
             dataSetName:
               description: name of already existing data set
               type: string
+              minLength: 1
             file:
               description: csv file with header
               type: string
