@@ -9,6 +9,9 @@ post:
       multipart/form-data:
         schema:
           type: object
+          required:
+            - dataSetName
+            - file
           properties:
             dataSetName:
               description: unique name of data set
@@ -41,6 +44,9 @@ put:
       multipart/form-data:
         schema:
           type: object
+          required:
+            - dataSetName
+            - file
           properties:
             dataSetName:
               description: name of already existing data set
